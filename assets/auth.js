@@ -67,11 +67,11 @@
       saveSession({ type: "institutional", email: e });
       setMessage("Sesión iniciada. Redirigiendo...", "success");
     }
-    setTimeout(() => { window.location.href = "index.html"; }, 500);
+    setTimeout(() => { window.location.href = "home.html"; }, 500);
   });
 
   $("anonymous-btn").addEventListener("click", () => {
     saveSession({ type: "anonymous", email: null, createdAt: new Date().toISOString() });
-    window.location.href = "index.html";
+    window.location.href = "home.html";
   });
 })();

@@ -9,13 +9,13 @@
 
 	/* -------------------- 1) Directorio de lugares del sitio -------------------- */
 	var SITE_DIRECTORY = [
-		{ title: 'Inicio', desc: 'Página principal del instituto', url: 'index.html', icon: 'home' },
-		{ title: 'Nuestro Colegio (resumen)', desc: 'Presentación institucional en la portada', url: 'index.html#nuestro-colegio', icon: 'info' },
-		{ title: 'Niveles Educativos (resumen)', desc: 'Acceso rápido a todos los niveles', url: 'index.html#niveles', icon: 'levels' },
-		{ title: 'Proyectos (resumen)', desc: 'Últimos proyectos institucionales', url: 'index.html#proyectos', icon: 'project' },
-		{ title: 'Testimonios', desc: 'Opiniones de la comunidad educativa', url: 'index.html#testimonios', icon: 'chat' },
-		{ title: 'Recorrido Virtual', desc: 'Tour 360° por el instituto', url: 'index.html#virtual-tour', icon: 'tour' },
-		{ title: 'Contacto rápido (Inicio)', desc: 'Datos de contacto desde la portada', url: 'index.html#contacto-home', icon: 'mail' },
+		{ title: 'Inicio', desc: 'Página principal del instituto', url: 'home.html', icon: 'home' },
+		{ title: 'Nuestro Colegio (resumen)', desc: 'Presentación institucional en la portada', url: 'home.html#nuestro-colegio', icon: 'info' },
+		{ title: 'Niveles Educativos (resumen)', desc: 'Acceso rápido a todos los niveles', url: 'home.html#niveles', icon: 'levels' },
+		{ title: 'Proyectos (resumen)', desc: 'Últimos proyectos institucionales', url: 'home.html#proyectos', icon: 'project' },
+		{ title: 'Testimonios', desc: 'Opiniones de la comunidad educativa', url: 'home.html#testimonios', icon: 'chat' },
+		{ title: 'Recorrido Virtual', desc: 'Tour 360° por el instituto', url: 'home.html#virtual-tour', icon: 'tour' },
+		{ title: 'Contacto rápido (Inicio)', desc: 'Datos de contacto desde la portada', url: 'home.html#contacto-home', icon: 'mail' },
 
 		{ title: 'Nuestro Colegio', desc: 'Historia, misión y valores institucionales', url: 'NuestroColegio.html', icon: 'info' },
 		{ title: 'Quiénes Somos', desc: 'Identidad institucional', url: 'NuestroColegio.html#quienes-somos', icon: 'info' },
@@ -49,7 +49,7 @@
 
 	function currentPageName() {
 		var path = window.location.pathname.split('/').pop();
-		return path || 'index.html';
+		return path || 'home.html';
 	}
 
 	var ICONS = {

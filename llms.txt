@@ -3,7 +3,7 @@
 > Sitio web institucional del Instituto Nuestra Señora de la Merced de Arroyito, Córdoba, Argentina.
 
 ## Sitio principal
-https://kingolitaprime.github.io/Pagina_2026_INSM/
+https://kingolitaprime.github.io/Pagina_2026_INSM/home.html
 
 ## Secciones
 - Nuestro Colegio: https://kingolitaprime.github.io/Pagina_2026_INSM/NuestroColegio.html
