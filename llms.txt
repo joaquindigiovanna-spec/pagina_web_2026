@@ -1,0 +1,15 @@
+# Instituto Nuestra Señora de la Merced
+
+> Sitio web institucional del Instituto Nuestra Señora de la Merced de Arroyito, Córdoba, Argentina.
+
+## Sitio principal
+https://pagina-web-2026-gamma.vercel.app/home.html
+
+## Secciones
+- Nuestro Colegio: https://pagina-web-2026-gamma.vercel.app/NuestroColegio.html
+- Nivel Inicial: https://pagina-web-2026-gamma.vercel.app/NivelInicial.html
+- Nivel Primario: https://pagina-web-2026-gamma.vercel.app/NivelPrimario.html
+- Nivel Secundario: https://pagina-web-2026-gamma.vercel.app/NivelSecundario.html
+- Nivel Terciario: https://pagina-web-2026-gamma.vercel.app/NivelTerciario.html
+- Proyectos: https://pagina-web-2026-gamma.vercel.app/Proyectos.html
+- Contacto: https://pagina-web-2026-gamma.vercel.app/Contacto.html
