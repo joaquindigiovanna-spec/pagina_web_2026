@@ -1646,12 +1646,14 @@
 						<h2>Envíanos un Mensaje</h2>
 						<form
 							id="contact-form-id"
-							action="https://formsubmit.co/ajax/eugenionavarro.sec@institutolamerced.edu.ar"
+							action="https://formsubmit.co/eugenionavarro.sec@institutolamerced.edu.ar"
 							method="POST"
 							novalidate
 						>
-							<input type="hidden" name="_captcha" value="false" />
 							<input type="hidden" name="_language" value="es" />
+							<input type="hidden" name="_next" value="https://insm.vercel.app/formulario-recibido.html" />
+							<input type="hidden" name="_subject" value="Nueva consulta desde el Sitio Web" />
+							<input type="hidden" name="_autoresponse" value="Recibimos tu mensaje correctamente. Gracias por comunicarte con el Instituto Nuestra Señora de la Merced. Responderemos a la brevedad." />
 							<input type="text" name="_honey" style="display: none" />
 
 							<div class="form-group" data-field="name">
@@ -1674,7 +1676,7 @@
 								<input
 									type="email"
 									id="email"
-									name="Correo de Contacto"
+									name="email"
 									required
 									aria-describedby="email-error"
 									autocomplete="email"
@@ -2145,34 +2147,8 @@ document.addEventListener('keydown', function (e) {
 					});
 				});
 
-
-					const formData = new FormData(contactFormAjax);
-					const data = Object.fromEntries(formData);
-					const asuntoInput = document.getElementById('subject').value;
-					data['_subject'] = `Consulta desde el Sitio Web (${asuntoInput})`;
-
-					fetch(contactFormAjax.action, {
-						method: 'POST',
-						headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-						body: JSON.stringify(data),
-					})
-					.then((response) => {
-						if (response.ok) {
-							responseDiv.textContent = '¡Gracias! Tu mensaje ha sido enviado con éxito.';
-							responseDiv.classList.add('response-success');
-							contactFormAjax.reset();
-						} else throw new Error('Error en la respuesta del servidor');
-					})
-					.catch((error) => {
-						console.error('Error en el envío del formulario:', error);
-						responseDiv.textContent = 'Lo sentimos, hubo un problema. Por favor, reintenta.';
-						responseDiv.classList.add('response-error');
-					})
-					.finally(() => {
-						submitBtn.disabled = false;
-						submitBtn.textContent = 'Enviar Mensaje';
-						responseDiv.style.display = 'block';
-					});
+				contactFormAjax.addEventListener('submit', (event) => {
+					if (!validateForm()) event.preventDefault();
 				});
 			}
 

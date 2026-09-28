@@ -2276,12 +2276,13 @@
 
                 <form
                     id="inscripcion-form-id"
-                    action="https://formsubmit.co/ajax/mercednivelsuperior@institutolamerced.edu.ar"
+                    action="https://formsubmit.co/mercednivelsuperior@institutolamerced.edu.ar"
                     method="POST"
                 >
-                    <input type="hidden" name="_captcha" value="false" />
                     <input type="hidden" name="_language" value="es" />
+                    <input type="hidden" name="_next" value="https://insm.vercel.app/formulario-recibido.html" />
                     <input type="hidden" name="_subject" value="Nueva Preinscripción · Profesorado de Educación Primaria" />
+                    <input type="hidden" name="_autoresponse" value="Recibimos correctamente tu preinscripción al Profesorado de Educación Primaria. Gracias por comunicarte con el Instituto Nuestra Señora de la Merced; nos pondremos en contacto a la brevedad." />
                     <input type="text" name="_honey" style="display: none" />
 
                     <div class="form-row">
@@ -2325,7 +2326,7 @@
                     <div class="form-row">
                         <div class="form-group">
                             <label for="insc-email">Correo Electrónico</label>
-                            <input type="email" id="insc-email" name="Correo Electrónico" required />
+                            <input type="email" id="insc-email" name="email" required />
                         </div>
                         <div class="form-group">
                             <label for="insc-localidad">Localidad</label>
@@ -2989,49 +2990,6 @@
                 });
             });
 
-            // --- Envío de Formulario de Preinscripción (AJAX / FormSubmit) ---
-            const inscripcionForm = document.getElementById('inscripcion-form-id');
-            const inscripcionBtn = document.getElementById('insc-submit-btn');
-            const inscripcionResponse = document.getElementById('insc-response-message');
-
-            if (inscripcionForm) {
-                inscripcionForm.addEventListener('submit', function (e) {
-                    e.preventDefault();
-                    inscripcionBtn.disabled = true;
-                    inscripcionBtn.textContent = 'Enviando...';
-                    inscripcionResponse.style.display = 'none';
-                    inscripcionResponse.className = 'response-message';
-
-                    const formData = new FormData(inscripcionForm);
-                    const data = Object.fromEntries(formData);
-
-                    fetch(inscripcionForm.action, {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-                        body: JSON.stringify(data),
-                    })
-                        .then((response) => {
-                            if (response.ok) {
-                                inscripcionResponse.textContent = '¡Gracias! Recibimos tu preinscripción y nos vamos a contactar a la brevedad.';
-                                inscripcionResponse.classList.add('response-success');
-                                inscripcionForm.reset();
-                            } else {
-                                console.error('Error en el envío del formulario (FormSubmit):', response);
-                                throw new Error('Error en la respuesta del servidor');
-                            }
-                        })
-                        .catch((error) => {
-                            console.error('Error completo del objeto de red/API:', error);
-                            inscripcionResponse.textContent = 'Lo sentimos, hubo un problema al enviar el formulario. Por favor, reintentá o escribinos a mercednivelsuperior@institutolamerced.edu.ar.';
-                            inscripcionResponse.classList.add('response-error');
-                        })
-                        .finally(() => {
-                            inscripcionBtn.disabled = false;
-                            inscripcionBtn.textContent = 'Enviar Preinscripción';
-                            inscripcionResponse.style.display = 'block';
-                        });
-                });
-            }
         </script>
     </body>
 </html>

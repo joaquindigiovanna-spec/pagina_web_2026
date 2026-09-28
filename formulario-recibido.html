@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, follow" />
+    <meta name="theme-color" content="#8f1025" />
+    <meta name="description" content="Confirmación de recepción de formulario del Instituto Nuestra Señora de la Merced." />
+    <title>Formulario recibido | INSM</title>
+    <link rel="icon" href="img/favicon_resultado.webp" type="image/webp" />
+    <style>
+        :root {
+            color-scheme: light;
+            --red: #8f1025;
+            --red-deep: #5c0b1a;
+            --gold: #e5a32b;
+            --ink: #202522;
+            --muted: #626b67;
+            --paper: #f5f4ef;
+            --line: #d9d7ce;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            min-width: 320px;
+            min-height: 100vh;
+            margin: 0;
+            color: var(--ink);
+            background: var(--paper);
+            font-family: "ProximaNova", "Trebuchet MS", sans-serif;
+        }
+
+        @font-face {
+            font-family: "Heuristica";
+            src: url("fonts/Heuristica-Regular.ttf") format("truetype");
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: "ProximaNova";
+            src: url("fonts/ProximaNova-Regular.ttf") format("truetype");
+            font-display: swap;
+        }
+
+        .site-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+            min-height: 84px;
+            padding: 16px clamp(20px, 6vw, 88px);
+            border-bottom: 1px solid var(--line);
+            background: #fff;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 13px;
+            color: var(--ink);
+            text-decoration: none;
+        }
+
+        .brand img { width: 46px; height: 46px; object-fit: contain; }
+        .brand span { max-width: 240px; font-size: 14px; line-height: 1.25; }
+
+        .home-link {
+            color: var(--red);
+            font-size: 14px;
+            font-weight: 700;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 4px;
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: minmax(0, 1.1fr) minmax(260px, 0.9fr);
+            align-items: center;
+            gap: clamp(36px, 8vw, 120px);
+            width: min(1160px, calc(100% - 40px));
+            min-height: min(690px, calc(100vh - 84px));
+            margin: 0 auto;
+            padding: 80px 0;
+        }
+
+        .message { animation: arrive 600ms ease both; }
+
+        .eyebrow {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            margin: 0 0 22px;
+            color: var(--red);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.4px;
+            text-transform: uppercase;
+        }
+
+        .eyebrow::before { width: 30px; height: 3px; background: var(--gold); content: ""; }
+
+        h1 {
+            max-width: 700px;
+            margin: 0;
+            font-family: "Heuristica", Georgia, serif;
+            font-size: clamp(42px, 6vw, 76px);
+            font-weight: 400;
+            line-height: 1.03;
+        }
+
+        .intro {
+            max-width: 520px;
+            margin: 26px 0 0;
+            color: var(--muted);
+            font-size: 18px;
+            line-height: 1.65;
+        }
+
+        .next-step {
+            max-width: 500px;
+            margin: 30px 0 0;
+            padding: 17px 0 17px 18px;
+            border-left: 3px solid var(--gold);
+            color: var(--ink);
+            font-size: 15px;
+            line-height: 1.55;
+        }
+
+        .actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 34px; }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 48px;
+            padding: 0 22px;
+            border: 1px solid var(--red);
+            background: var(--red);
+            color: #fff;
+            font-size: 14px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: background-color 160ms ease, transform 160ms ease;
+        }
+
+        .button:hover { transform: translateY(-2px); background: var(--red-deep); }
+        .button:focus-visible, .home-link:focus-visible { outline: 3px solid var(--gold); outline-offset: 4px; }
+
+        .seal {
+            position: relative;
+            display: grid;
+            place-items: center;
+            width: min(100%, 410px);
+            aspect-ratio: 1;
+            justify-self: end;
+            border: 1px solid rgba(143, 16, 37, 0.25);
+            border-radius: 50%;
+            color: var(--red);
+            animation: arrive 700ms 100ms ease both;
+        }
+
+        .seal::before, .seal::after {
+            position: absolute;
+            border: 1px solid rgba(143, 16, 37, 0.18);
+            border-radius: 50%;
+            content: "";
+        }
+
+        .seal::before { inset: 18px; }
+        .seal::after { inset: 37px; border-color: rgba(229, 163, 43, 0.7); }
+
+        .seal-mark {
+            z-index: 1;
+            display: grid;
+            place-items: center;
+            width: 112px;
+            height: 112px;
+            border-radius: 50%;
+            background: var(--red);
+            color: white;
+            font-family: Georgia, serif;
+            font-size: 58px;
+            line-height: 1;
+        }
+
+        .seal-caption {
+            position: absolute;
+            bottom: 18%;
+            padding: 0 12px;
+            background: var(--paper);
+            color: var(--red-deep);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1.4px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        footer {
+            padding: 18px 20px;
+            border-top: 1px solid var(--line);
+            color: var(--muted);
+            font-size: 12px;
+            text-align: center;
+        }
+
+        @keyframes arrive {
+            from { opacity: 0; transform: translateY(14px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 720px) {
+            .site-header { min-height: 72px; padding: 12px 20px; }
+            .brand img { width: 40px; height: 40px; }
+            .brand span { max-width: 165px; font-size: 12px; }
+            main { grid-template-columns: 1fr; gap: 38px; min-height: auto; padding: 68px 0 48px; }
+            .message { order: 1; }
+            .seal { order: 0; justify-self: start; width: min(190px, 48vw); }
+            .seal-mark { width: 58px; height: 58px; font-size: 32px; }
+            .seal::before { inset: 10px; }
+            .seal::after { inset: 20px; }
+            .seal-caption { bottom: 13%; font-size: 9px; }
+            .intro { font-size: 16px; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="index.html">
+            <img src="img/favicon_resultado.webp" alt="" />
+            <span>Instituto Nuestra Señora de la Merced</span>
+        </a>
+        <a class="home-link" href="index.html">Volver al inicio</a>
+    </header>
+    <main>
+        <section class="message" aria-labelledby="confirmation-title">
+            <p class="eyebrow">Formulario recibido</p>
+            <h1 id="confirmation-title">Gracias por escribirnos.</h1>
+            <p class="intro">Tu formulario fue enviado correctamente. El equipo del Instituto Nuestra Señora de la Merced lo revisará y se pondrá en contacto si hace falta.</p>
+            <p class="next-step">La confirmación también se envió al correo que ingresaste. Si no la encontrás, revisá la carpeta de correo no deseado.</p>
+            <div class="actions">
+                <a class="button" href="index.html">Volver al sitio</a>
+                <a class="home-link" href="Contacto.html">Ver datos de contacto</a>
+            </div>
+        </section>
+        <div class="seal" aria-hidden="true">
+            <span class="seal-mark">✓</span>
+            <span class="seal-caption">INSM · Arroyito</span>
+        </div>
+    </main>
+    <footer>Instituto Nuestra Señora de la Merced · Arroyito, Córdoba</footer>
+</body>
+</html>
