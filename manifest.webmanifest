@@ -9,14 +9,14 @@
   "description": "Sitio web institucional del Instituto Nuestra Señora de la Merced de Arroyito, Córdoba.",
   "icons": [
     {
-      "src": "img/favicon-192.png",
+      "src": "img/favicon-192_resultado.webp",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/webp"
     },
     {
-      "src": "img/favicon-512.png",
+      "src": "img/favicon-512_resultado.webp",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/webp"
     }
   ],
   "lang": "es-AR"

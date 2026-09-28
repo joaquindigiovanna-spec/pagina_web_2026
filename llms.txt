@@ -1,9 +1,18 @@
 # Instituto Nuestra Señora de la Merced
 
-> Sitio web institucional del Instituto Nuestra Señora de la Merced de Arroyito, Córdoba, Argentina.
+> Instituto educativo mercedario de Arroyito, Córdoba, Argentina. Fundado el 1º de octubre de 1887. Ofrece Nivel Inicial, Primario, Secundario y Terciario.
 
-## Sitio principal
-https://kingolitaprime.github.io/Pagina_2026_INSM/
+## Datos
+- Dirección: 9 de Julio 465, Arroyito, Córdoba, Argentina
+- Email: info@insm.edu.ar
+- Teléfonos: +54 3576 408967 / +54 3576 421440
+- Sitio: https://kingolitaprime.github.io/Pagina_2026_INSM/
+
+## Niveles y propuesta
+- Nivel Inicial: Jardín de Infantes "Santa María de Cervellón", con inglés desde sala de 3 años.
+- Nivel Primario: propuesta de excelencia académica, valores y acompañamiento personalizado.
+- Nivel Secundario: especialidades en Informática y Humanidades, con inglés por niveles.
+- Nivel Terciario: Profesorado de Educación Primaria (4 años, título con validez nacional).
 
 ## Secciones
 - Nuestro Colegio: https://kingolitaprime.github.io/Pagina_2026_INSM/NuestroColegio.html
