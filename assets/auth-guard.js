@@ -11,7 +11,7 @@
   "use strict";
 
   var SESSION_KEY = "insm-session-v1";
-  var LOGIN_URL = "index.html";
+  var LOGIN_URL = "acceso.html";
   var DOMAIN_RE = /^[^\s@]+@institutolamerced\.edu\.ar$/;
 
   function getSession() {

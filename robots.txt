@@ -2,5 +2,6 @@ User-agent: *
 Allow: /
 Disallow: /templates/
 Disallow: /codigo-otros/
+Disallow: /acceso.html
 
-Sitemap: https://pagina-web-2026-gamma.vercel.app/sitemap.xml
+Sitemap: https://kingolitaprime.github.io/Pagina_2026_INSM/sitemap.xml
